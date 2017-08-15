@@ -12,7 +12,7 @@ import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity  implements ViewPager.OnPageChangeListener
+public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener
 {
 
     private ViewPager pager = null;
@@ -71,63 +71,64 @@ public class MainActivity extends AppCompatActivity  implements ViewPager.OnPage
         //// SETTTING THE PAGER'S FIRST PAGE
         this.pager.setCurrentItem(1);
 
-//        this.tab_layout.setOnTabSelectedListener(this);
-        this.pager.addOnPageChangeListener(this);
+        this.tab_layout.setOnTabSelectedListener(this);
+//        this.pager.addOnPageChangeListener(this);
     }
 
     //// VIEWPAGER'S METHODS START HERE! Fuckanashit
-    @Override
-    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-    }
-
-    @Override
-    public void onPageSelected(int position)
-    {
-        current_pos = position;
-    }
-
-    @Override
-    public void onPageScrollStateChanged(int state)
-    {
-        if(current_pos == 0)
-        {
-            pager.setCurrentItem(7,false);
-        }
-        else if(current_pos == 8)
-        {
-            pager.setCurrentItem(1,false);
-        }
-    }
-    /// VIEWPAGER'S METHODS ENDS HERE! Fuckanashit
-
-    //// TABLAYOUT'S METHOD STARTS HERE! Fuckanashit
 //    @Override
-//    public void onTabSelected(TabLayout.Tab tab)
+//    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+//
+//    }
+//
+//    @Override
+//    public void onPageSelected(int position)
 //    {
-//        if(tab.getPosition() == 0)
+//        current_pos = position;
+//    }
+//
+//    @Override
+//    public void onPageScrollStateChanged(int state)
+//    {
+//        if(current_pos == 0)
 //        {
 //            pager.setCurrentItem(7,false);
 //        }
-//        else if(tab.getPosition() == 8)
+//        else if(current_pos == 8)
 //        {
 //            pager.setCurrentItem(1,false);
 //        }
-//        else
-//        {
-//            pager.setCurrentItem(tab.getPosition(),true);
-//        }
 //    }
-//
-//    @Override
-//    public void onTabUnselected(TabLayout.Tab tab) {
-//
-//    }
-//
-//    @Override
-//    public void onTabReselected(TabLayout.Tab tab) {
-//
-//    }
+    /// VIEWPAGER'S METHODS ENDS HERE! Fuckanashit
+
+    //// TABLAYOUT'S METHOD STARTS HERE! Fuckanashit
+    @Override
+    public void onTabSelected(TabLayout.Tab tab)
+    {
+        if(tab.getPosition() == 0)
+        {
+            pager.setCurrentItem(7,false);
+        }
+        else if(tab.getPosition() == 8)
+        {
+            pager.setCurrentItem(1,false);
+        }
+        else
+        {
+            pager.setCurrentItem(tab.getPosition(),true);
+        }
+    }
+
+    @Override
+    public void onTabUnselected(TabLayout.Tab tab) {
+
+    }
+
+    @Override
+    public void onTabReselected(TabLayout.Tab tab)
+    {
+
+    }
     ///TABLAYOUT'S METHOD END HERE! Fuckanashit
 
 
