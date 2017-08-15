@@ -12,7 +12,7 @@ import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener, ViewPager.OnPageChangeListener
+public class MainActivity extends AppCompatActivity  implements ViewPager.OnPageChangeListener
 {
     private ViewPager pager = null;
     private Adapter adapter = null;
@@ -32,6 +32,11 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         this.fragmentArrayList = new ArrayList<>();
         this.fragmentArrayList.add(new BlankFragment2());
         this.fragmentArrayList.add(new BlankFragment());
+        this.fragmentArrayList.add(new BlankFragment());
+        this.fragmentArrayList.add(new BlankFragment());
+        this.fragmentArrayList.add(new BlankFragment());
+        this.fragmentArrayList.add(new BlankFragment());
+        this.fragmentArrayList.add(new BlankFragment());
         this.fragmentArrayList.add(new BlankFragment2());
         this.fragmentArrayList.add(new BlankFragment());
 
@@ -40,6 +45,11 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         this.stringArrayList.add("");
         this.stringArrayList.add("1");
         this.stringArrayList.add("2");
+        this.stringArrayList.add("3");
+        this.stringArrayList.add("4");
+        this.stringArrayList.add("5");
+        this.stringArrayList.add("6");
+        this.stringArrayList.add("7");
         this.stringArrayList.add("");
 
 
@@ -54,13 +64,13 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         LinearLayout tabs = (LinearLayout)this.tab_layout.getChildAt(0);
         tabs.getChildAt(0).setEnabled(false);
         tabs.getChildAt(0).setVisibility(View.GONE);
-        tabs.getChildAt(3).setEnabled(false);
-        tabs.getChildAt(3).setVisibility(View.GONE);
+        tabs.getChildAt(8).setEnabled(false);
+        tabs.getChildAt(8).setVisibility(View.GONE);
 
         //// SETTTING THE PAGER'S FIRST PAGE
         this.pager.setCurrentItem(1);
 
-        this.tab_layout.setOnTabSelectedListener(this);
+//        this.tab_layout.setOnTabSelectedListener(this);
         this.pager.addOnPageChangeListener(this);
     }
 
@@ -81,9 +91,9 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
     {
         if(current_pos == 0)
         {
-            pager.setCurrentItem(2,false);
+            pager.setCurrentItem(7,false);
         }
-        else if(current_pos == 3)
+        else if(current_pos == 8)
         {
             pager.setCurrentItem(1,false);
         }
@@ -91,40 +101,36 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
     /// VIEWPAGER'S METHODS ENDS HERE! Fuckanashit
 
     //// TABLAYOUT'S METHOD STARTS HERE! Fuckanashit
-    @Override
-    public void onTabSelected(TabLayout.Tab tab)
-    {
-        if(tab.getPosition() == 0)
-        {
-            pager.setCurrentItem(2,false);
-        }
-        else if(tab.getPosition() == 3)
-        {
-            pager.setCurrentItem(1,false);
-        }
-        else if (tab.getPosition() == 1)
-        {
-            pager.setCurrentItem(1,true);
-        }
-        else if (tab.getPosition() == 2)
-        {
-            pager.setCurrentItem(2,true);
-        }
-    }
-
-    @Override
-    public void onTabUnselected(TabLayout.Tab tab) {
-
-    }
-
-    @Override
-    public void onTabReselected(TabLayout.Tab tab) {
-
-    }
+//    @Override
+//    public void onTabSelected(TabLayout.Tab tab)
+//    {
+//        if(tab.getPosition() == 0)
+//        {
+//            pager.setCurrentItem(7,false);
+//        }
+//        else if(tab.getPosition() == 8)
+//        {
+//            pager.setCurrentItem(1,false);
+//        }
+//        else
+//        {
+//            pager.setCurrentItem(tab.getPosition(),true);
+//        }
+//    }
+//
+//    @Override
+//    public void onTabUnselected(TabLayout.Tab tab) {
+//
+//    }
+//
+//    @Override
+//    public void onTabReselected(TabLayout.Tab tab) {
+//
+//    }
     ///TABLAYOUT'S METHOD END HERE! Fuckanashit
 
 
-
+    //// JUST A SIMPLE FRAGMENT ADAPTER Fuckanashit
     private class Adapter extends FragmentPagerAdapter
     {
         public Adapter(FragmentManager fm) {
