@@ -60,15 +60,15 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
                         this.tab_layout.setupWithViewPager(this.pager);
 
         /////DISABLING THE FAKE TABS AND SETTING THEM TO GONE Fuckanashit
-        LinearLayout tabs = (LinearLayout)this.tab_layout.getChildAt(0);
-      tabs.getChildAt(0).setEnabled(false);
-     tabs.getChildAt(0).setVisibility(View.GONE);
-    tabs.getChildAt(8).setEnabled(false);
-  tabs.getChildAt(8).setVisibility(View.GONE);
+                        LinearLayout tabs = (LinearLayout)this.tab_layout.getChildAt(0);
+                    tabs.getChildAt(0).setEnabled(false);
+                tabs.getChildAt(0).setVisibility(View.GONE);
+            tabs.getChildAt(8).setEnabled(false);
+        tabs.getChildAt(8).setVisibility(View.GONE);
 
         //// SETTTING THE PAGER'S FIRST PAGE
         this.pager.setCurrentItem(1);
-        this.tab_layout.setOnTabSelectedListener(this);
+            this.tab_layout.setOnTabSelectedListener(this);
     }
 
     //// TABLAYOUT'S METHOD STARTS HERE! Fuckanashit
