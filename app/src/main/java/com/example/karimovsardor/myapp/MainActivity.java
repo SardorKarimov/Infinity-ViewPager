@@ -21,21 +21,21 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
     private ArrayList<Fragment> fragmentArrayList = null;
     private ArrayList<String> stringArrayList = null;
 
-    //// INITIALIZING MY ONE TIME OBJECTS THAT NEED TO BE SET UP ONCE AT THE BEGINNING OF THE APPLICATION
+    //// INITIALIZING MY ONE TIME OBJECTS THAT NEED TO BE SET UP ONCE AT THE BEGINNING OF THE APPLICATION Fuckanashit
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ////FILLING UP THE ARRAYLIST WITH FRAGMENTS
+        ////FILLING UP THE ARRAYLIST WITH FRAGMENTS Fuckanashit
         this.fragmentArrayList = new ArrayList<>();
         this.fragmentArrayList.add(new BlankFragment2());
         this.fragmentArrayList.add(new BlankFragment());
         this.fragmentArrayList.add(new BlankFragment2());
         this.fragmentArrayList.add(new BlankFragment());
 
-        ////FILLING UP THE ARRAYLIST WITH TAB TITLES
+        ////FILLING UP THE ARRAYLIST WITH TAB TITLES Fuckanashit
         this.stringArrayList = new ArrayList<>();
         this.stringArrayList.add("");
         this.stringArrayList.add("1");
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         this.tab_layout = (TabLayout)findViewById(R.id.tab);
         this.tab_layout.setupWithViewPager(this.pager);
 
-        /////DISABLING THE FAKE TABS AND SETTING THEM TO GONE
+        /////DISABLING THE FAKE TABS AND SETTING THEM TO GONE Fuckanashit
         LinearLayout tabs = (LinearLayout)this.tab_layout.getChildAt(0);
         tabs.getChildAt(0).setEnabled(false);
         tabs.getChildAt(0).setVisibility(View.GONE);
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         this.pager.addOnPageChangeListener(this);
     }
 
-    //// VIEWPAGER'S METHODS START HERE!
+    //// VIEWPAGER'S METHODS START HERE! Fuckanashit
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -88,9 +88,9 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
             pager.setCurrentItem(1,false);
         }
     }
-    /// VIEWPAGER'S METHODS ENDS HERE!
+    /// VIEWPAGER'S METHODS ENDS HERE! Fuckanashit
 
-    //// TABLAYOUT'S METHOD STARTS HERE!
+    //// TABLAYOUT'S METHOD STARTS HERE! Fuckanashit
     @Override
     public void onTabSelected(TabLayout.Tab tab)
     {
@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
     public void onTabReselected(TabLayout.Tab tab) {
 
     }
-    ///TABLAYOUT'S METHOD END HERE!
+    ///TABLAYOUT'S METHOD END HERE! Fuckanashit
 
 
 
