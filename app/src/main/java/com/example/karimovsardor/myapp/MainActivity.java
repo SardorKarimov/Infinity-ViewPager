@@ -14,6 +14,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity  implements ViewPager.OnPageChangeListener
 {
+
     private ViewPager pager = null;
     private Adapter adapter = null;
     private TabLayout tab_layout = null;
